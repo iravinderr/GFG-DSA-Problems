@@ -111,17 +111,31 @@ Node* newNode(int val) {
     return temp;
 }
 */
+void minBST(Node* root, int& ans){
+    Node* temp = root;
+    while(temp->left != NULL){
+        temp = temp->left;
+    }
+    
+    ans = temp->data;
+}
+
 int minValue(Node* root) {
     // Code here
     if(root == NULL){
         return -1;
     }
     
-    if(!root->left){
-        return root->data;
-    }
+    int ans;
+    minBST(root, ans);
+    return ans;
     
-    else{
-        return minValue(root->left);
-    }
+    
+    // if(!root->left){
+    //     return root->data;
+    // }
+    
+    // else{
+    //     return minValue(root->left);
+    // }
 }
