@@ -10,6 +10,7 @@ class Solution
        vector <int> commonElements (int A[], int B[], int C[], int n1, int n2, int n3)
         {
             //code here.
+            vector<int> ans;
             map<int, int> freq;
             for(int i=0; i<n1; i++){
                 if(freq[A[i]] == 0){
@@ -29,7 +30,6 @@ class Solution
                 }
             }
             
-            vector<int> ans;
             for(auto i : freq){
                 if(i.second == 3){
                     ans.push_back(i.first);
