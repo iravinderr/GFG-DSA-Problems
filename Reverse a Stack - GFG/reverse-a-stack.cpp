@@ -21,13 +21,6 @@ public:
         solve(s, x);
         s.push(val);
     }
-    
-    stack<int> insertAtBottom(stack<int> St,int X){
-        
-        solve(St, X);
-        
-        return St;
-    }
 
     void Reverse(stack<int> &St){
         
@@ -39,7 +32,7 @@ public:
         St.pop();
         Reverse(St);
         
-        St = insertAtBottom(St, val);
+        solve(St, val);
         
     }
 };
