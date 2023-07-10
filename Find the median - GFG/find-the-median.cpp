@@ -11,10 +11,6 @@ public:
 		int find_median(vector<int> v)
 		{
 		    // Code here.
-		    if(v.size()==2){
-		        return (v[0] + v[1])/2;
-		    }
-		    
 		    sort(v.begin(), v.end());
 		    
 		    if(v.size() % 2 != 0){
